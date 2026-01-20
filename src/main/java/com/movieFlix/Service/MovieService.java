@@ -45,7 +45,7 @@ public class MovieService {
         return repo.save(thismovie);
     }
 
-    public List<Movie> findByCategorie(Long id){
-        return repo.findMovieByCategories(List.of(Category.builder().id(id).build()));
+    public List<Movie> findByCategorie(Long categoryid){
+        return repo.findMovieByCategoriesIn(List.of(Category.builder().id(categoryid).build()));
     }
 }
